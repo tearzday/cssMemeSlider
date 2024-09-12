@@ -8,15 +8,43 @@
 </head>
 <body>
     <div class="container">
-        <div class="slider">
-            <div class="slider__content"></div>
-            <div class="slider__navigation">
-                <div class="slider__control"></div>
-                <div class="slider__control"></div>
-                <div class="slider__control"></div>
+       <div class="slider">
+            <input type="radio" name="carusel" id="control1" value="" checked>
+            <input type="radio" name="carusel" id="control2" value="">
+            <input type="radio" name="carusel" id="control3" value="">
+            <input type="radio" name="carusel" id="control4" value="">
+            <div class="slides">
+                <div class="slide1"></div>
+                <div class="slide2"></div>
+                <div class="slide3"></div>
+                <div class="slide4"></div>
             </div>
-            <div class="slider__info"></div>
+            <div class="slider__container">
+                <div class="slider__navigation">
+                    <label class="control label-control1" for="control1">
+                        <div class="circle"></div>
+                    </label>
+                    <label class="control label-control2" for="control2">
+                        <div class="circle"></div>
+                    </label>
+                    <label class="control label-control3" for="control3">
+                        <div class="circle"></div>
+                    </label>
+                    <label class="control label-control4" for="control4">
+                        <div class="circle"></div>
+                    </label>
+                </div>
+                <div class="slider__info">
+                    <p class="slide1-text">slide1-text</p>
+                    <p class="slide2-text">slide2-text</p>
+                    <p class="slide3-text">slide3-text</p>
+                    <p class="slide4-text">slide4-text</p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <p class="test"> </p>
+
 </body>
 </html>
