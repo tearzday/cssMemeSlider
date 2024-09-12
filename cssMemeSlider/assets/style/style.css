@@ -27,15 +27,7 @@ input[type='radio'] {
  }
 
 
-.slide1 {
-    width: 50vw;
-    height: 50vh;
-    flex-shrink: 0;
-    transition: 0.5s;
-}
-
-.slide2 {
-    display: flex;
+.slide {
     width: 50vw;
     height: 50vh;
     flex-shrink: 0;
@@ -48,21 +40,6 @@ img {
     width: 100%;
     height: 100%;
 }
-
-.slide3 {
-    width: 50vw;
-    height: 50vh;
-    flex-shrink: 0;
-    transition: 0.5s;
-}
-
-.slide4 {
-    width: 50vw;
-    height: 50vh;
-    flex-shrink: 0;
-    transition: 0.5s;
-}
-
 
 
 .slider__container {
@@ -130,11 +107,15 @@ label:active .circle{
 #control1:checked ~ .slider__container .slider__navigation .label-control1 .circle {
     background-color: transparent;
     outline-offset: -0.1rem;
- }
+}
 
- #control1:checked ~ .slides .slide1,  #control1:checked ~ .slider__container .slider__info .slide1-text{
+#control1:checked ~ .slides .slide1,  #control1:checked ~ .slider__container .slider__info .slide1-text{
     margin-left: 0%;
- }
+}
+
+#control1:checked ~ .slides .slide1, #control3:checked ~ .slider__container .slider__info .slide3-text {
+    animation: visible 0.5s linear ;
+}
 
 
 
@@ -143,33 +124,45 @@ label:active .circle{
 #control2:checked ~ .slider__container .slider__navigation .label-control2 .circle {
     background-color: transparent;
     outline-offset: -0.1rem;
- }
+}
 
- #control2:checked ~ .slides .slide1, #control2:checked ~ .slider__container .slider__info .slide1-text {
+#control2:checked ~ .slides .slide1, #control2:checked ~ .slider__container .slider__info .slide1-text {
     margin-left: -100%;
- }
+}
+
+#control2:checked ~ .slides .slide1, #control3:checked ~ .slider__container .slider__info .slide32text {
+    animation: visible 0.5s linear ;
+}
 
  /* Тертий контрол активен */
 
- #control3:checked ~ .slider__container .slider__navigation .label-control3 .circle {
+#control3:checked ~ .slider__container .slider__navigation .label-control3 .circle {
     background-color: transparent;
     outline-offset: -0.1rem;
- }
+}
 
- #control3:checked ~ .slides .slide1, #control3:checked ~ .slider__container .slider__info .slide1-text {
+#control3:checked ~ .slides .slide1, #control3:checked ~ .slider__container .slider__info .slide1-text {
     margin-left: -200%;
- }
+}
+
+#control3:checked ~ .slides .slide1, #control3:checked ~ .slider__container .slider__info .slide3-text {
+    animation: visible 0.5s linear ;
+}
 
 /* Четвертый контрол активен */
 
 #control4:checked ~ .slider__container .slider__navigation .label-control4 .circle {
     background-color: transparent;
     outline-offset: -0.1rem;
- }
+}
 
- #control4:checked ~ .slides .slide1, #control4:checked ~ .slider__container .slider__info .slide1-text {
+#control4:checked ~ .slides .slide1, #control4:checked ~ .slider__container .slider__info .slide1-text {
     margin-left: -300%;
- }
+}
+
+#control4:checked ~ .slides .slide1, #control3:checked ~ .slider__container .slider__info .slide4-text {
+    animation: visible 0.5s linear ;
+}
 
 @media (max-width: 768px) {
     .slides, .slide, .slider__container {
@@ -186,5 +179,14 @@ label:active .circle{
 
     .slider__info {
         margin-top: 1rem;
+    }
+}
+
+@keyframes visible {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
